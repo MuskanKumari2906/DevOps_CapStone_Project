@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+mlruns/
+data/*.csv
+data/processed/
+.dvc/config.local
+.dvc/tmp/
+.dvc/cache/
+*.joblib
+powershell.bat

@@ -1,0 +1,23 @@
+stages:
+  preprocess:
+    cmd: python src/preprocess.py --input data/heart.csv --output_dir data/processed
+    deps:
+      - src/preprocess.py
+      - data/heart.csv
+    outs:
+      - data/processed/X_train.csv
+      - data/processed/X_test.csv
+      - data/processed/y_train.csv
+      - data/processed/y_test.csv
+      - data/processed/scaler.joblib
+
+  train:
+    cmd: python src/train.py --data_dir data/processed --model_dir model
+    deps:
+      - src/train.py
+      - data/processed/X_train.csv
+      - data/processed/X_test.csv
+      - data/processed/y_train.csv
+      - data/processed/y_test.csv
+    outs:
+      - model/best_model.joblib
