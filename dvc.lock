@@ -23,8 +23,8 @@ stages:
       size: 61990
     - path: data/processed/scaler.joblib
       hash: md5
-      md5: 01a211098a5dbb49bbfb955950caba19
-      size: 1231
+      md5: 2221802422368259dd4e3260bf48c827
+      size: 1359
     - path: data/processed/y_test.csv
       hash: md5
       md5: 22e834b1db95f732653ed324bcabd3b3
